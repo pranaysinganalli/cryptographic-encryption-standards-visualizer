@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AES Single Operations</title>
+</head>
+<body>
+  <link rel="stylesheet" href="style.css" />
+  <div class="container">
+  <h2>Perform AES Single Operation</h2>
+
+  <label for="aesplaintext" id="aesinputLabel">Input state:</label>
+      <br>
+
+      <input type="radio" name="aesPTtype" id="aesplaintextHex" value="hex" checked>
+      <label for="aesplaintextHex">Hex</label>
+
+      <input type="radio" name="aesPTtype" id="aesplaintextAscii" value="ascii">
+      <label for="aesplaintextAscii">ASCII</label>
+      <br>
+
+      <input type="text" id="aesplaintext" placeholder='e.g. 0011223344556677 (Hex) or "Hello world" (ASCII)' />
+      <br><br>
+
+  <button onclick="runAESOperation('subBytes')">SubBytes</button>
+  <button onclick="runAESOperation('shiftRows')">ShiftRows</button>
+  <button onclick="runAESOperation('mixColumns')">MixColumns</button>
+  <br><br>
+
+  <button id="bacc"  onclick="goBack()">⬅ Back to Home</button>
+  <br><br>
+
+  <div id="output"></div>
+  </div>
+  <script src="aes.js"></script>
+  
+</body>
+</html>
